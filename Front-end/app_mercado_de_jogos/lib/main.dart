@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'screens/screen_login.dart';
+
+// Ponto de entrada do app Flutter.
 void main() {
   runApp(const MyApp());
 }
@@ -7,15 +10,19 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Meu App',
       theme: ThemeData(
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        primarySwatch: Colors.blue,
+        inputDecorationTheme: const InputDecorationTheme(
+          border: OutlineInputBorder(),
+        ),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      // A primeira tela aberta pelo app agora é a tela de login.
+      home: const LoginScreen(),
     );
   }
 }
