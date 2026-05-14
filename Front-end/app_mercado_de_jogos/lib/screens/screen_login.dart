@@ -1,9 +1,7 @@
 import 'dart:convert';
 import 'package:app_mercado_de_jogos/screens/screen_carrossel.dart';
-
 import 'screen_cadastro.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -53,8 +51,11 @@ class _LoginScreenState extends State<LoginScreen> {
               width: 350,
               padding: const EdgeInsets.all(24),
               decoration: BoxDecoration(
-                color: const Color(0xE6FFFFFF),
-                border: Border.all(color: Colors.white, width: 1.5),
+                color: const Color.fromARGB(139, 0, 0, 0),
+                border: Border.all(
+                  color: const Color.fromARGB(255, 119, 0, 255),
+                  width: 1.5,
+                ),
                 borderRadius: BorderRadius.circular(12),
                 boxShadow: const [
                   BoxShadow(
@@ -74,41 +75,40 @@ class _LoginScreenState extends State<LoginScreen> {
                       fontSize: 28,
                       fontFamily: 'Orbitron',
                       fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 89, 0, 255),
                     ),
                   ),
                   const SizedBox(height: 60),
 
                   TextField(
                     controller: loginController,
+                    style: const TextStyle(color: Colors.white),
                     decoration: const InputDecoration(
                       labelText: 'E-mail ou username',
                       border: OutlineInputBorder(),
                     ),
                   ),
-
                   const SizedBox(height: 16),
 
                   TextField(
                     controller: senhaController,
                     obscureText: true,
+                    style: const TextStyle(color: Colors.white),
                     decoration: const InputDecoration(
                       labelText: 'Senha',
                       border: OutlineInputBorder(),
                     ),
                   ),
-
                   const SizedBox(height: 24),
 
                   ElevatedButton(
-                    // Precisamos validar o login.
                     onPressed: carregando ? null : fazerLogin,
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF0D47A1),
+                      backgroundColor: const Color.fromARGB(255, 72, 0, 255),
                       foregroundColor: Colors.white,
                     ),
                     child: Text(carregando ? 'Entrando...' : 'Entrar'),
                   ),
-
                   const SizedBox(height: 12),
 
                   TextButton(
