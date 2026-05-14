@@ -1,7 +1,6 @@
-import 'dart:convert';
 import 'screen_cadastro.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -47,9 +46,9 @@ class _LoginScreenState extends State<LoginScreen> {
             width: 350,
             padding: const EdgeInsets.all(24),
             decoration: BoxDecoration(
-              color: const Color(0xE6FFFFFF),
+              color: const Color.fromARGB(139, 0, 0, 0),
               border: Border.all(
-                color: Colors.white,
+                color: const Color.fromARGB(255, 119, 0, 255),
                 width: 1.5,
               ),
               borderRadius: BorderRadius.circular(12),
@@ -71,12 +70,15 @@ class _LoginScreenState extends State<LoginScreen> {
                     fontSize: 28,
                     fontFamily: 'Orbitron',
                     fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 89, 0, 255),
                   ),
+            
                 ),
                 const SizedBox(height: 60),
 
                 TextField(
                   controller: loginController,
+                  style: const TextStyle(color: Colors.white),
                   decoration: const InputDecoration(
                     labelText: 'E-mail ou username',
                     border: OutlineInputBorder(),
@@ -88,6 +90,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 TextField(
                   controller: senhaController,
                   obscureText: true,
+                  style: const TextStyle(color: Colors.white),
                   decoration: const InputDecoration(
                     labelText: 'Senha',
                     border: OutlineInputBorder(),
@@ -99,7 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ElevatedButton(
                   onPressed: carregando ? null : fazerLogin,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF0D47A1),
+                    backgroundColor: const Color.fromARGB(255, 72, 0, 255),
                     foregroundColor: Colors.white,
                   ),
                   child: Text(
