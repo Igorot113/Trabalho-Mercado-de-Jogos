@@ -22,6 +22,7 @@ namespace ArcadeFlow.Data
                 entity.Property(e => e.Email).HasColumnName("email");
                 entity.Property(e => e.Username).HasColumnName("username");
                 entity.Property(e => e.SenhaHash).HasColumnName("senhahash");
+                entity.Property(e => e.DataNascimento).HasColumnName("data_nascimento");
                 entity.Property(e => e.DataCriacao).HasColumnName("data_criacao");
             });
 

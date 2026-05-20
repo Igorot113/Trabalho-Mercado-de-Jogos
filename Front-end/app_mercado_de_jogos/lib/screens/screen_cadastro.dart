@@ -1,3 +1,4 @@
+import 'package:app_mercado_de_jogos/services/api_service.dart';
 import 'package:flutter/material.dart';
 
 class CadastroScreen extends StatefulWidget {
@@ -9,20 +10,85 @@ class CadastroScreen extends StatefulWidget {
 
 class _CadastroScreenState extends State<CadastroScreen> {
   final nomeCompController = TextEditingController();
+  final usernameController = TextEditingController();
   final dataNascController = TextEditingController();
   final emailController = TextEditingController();
   final senhaController = TextEditingController();
   final confirmarSenhaController = TextEditingController();
+  final apiService = ApiService();
 
   bool carregando = false;
 
-  void fazerCadastro() {
-    print('Cadastro realizado');
+  Future<void> fazerCadastro() async {
+    if (nomeCompController.text.trim().isEmpty ||
+        usernameController.text.trim().isEmpty ||
+        dataNascController.text.trim().isEmpty ||
+        emailController.text.trim().isEmpty ||
+        senhaController.text.trim().isEmpty ||
+        confirmarSenhaController.text.trim().isEmpty) {
+      mostrarMensagem('Preencha todos os campos.');
+      return;
+    }
+
+    if (senhaController.text != confirmarSenhaController.text) {
+      mostrarMensagem('As senhas nao conferem.');
+      return;
+    }
+
+    setState(() => carregando = true);
+
+    try {
+      await apiService.cadastrar(
+        nome: nomeCompController.text.trim(),
+        email: emailController.text.trim(),
+        username: usernameController.text.trim(),
+        dataNascimento: dataNascController.text.trim(),
+        password: senhaController.text.trim(),
+      );
+
+      if (!mounted) return;
+
+      mostrarMensagem('Cadastro realizado com sucesso.');
+      Navigator.pop(context);
+    } catch (e) {
+      mostrarMensagem(e.toString().replaceFirst('Exception: ', ''));
+    } finally {
+      if (mounted) setState(() => carregando = false);
+    }
+  }
+
+  void mostrarMensagem(String mensagem) {
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(SnackBar(content: Text(mensagem)));
+  }
+
+  Future<void> selecionarDataNascimento() async {
+    final hoje = DateTime.now();
+    final dataSelecionada = await showDatePicker(
+      context: context,
+      initialDate: DateTime(2000),
+      firstDate: DateTime(1900),
+      lastDate: hoje,
+    );
+
+    if (dataSelecionada == null) return;
+
+    dataNascController.text = formatarData(dataSelecionada);
+  }
+
+  String formatarData(DateTime data) {
+    final ano = data.year.toString().padLeft(4, '0');
+    final mes = data.month.toString().padLeft(2, '0');
+    final dia = data.day.toString().padLeft(2, '0');
+
+    return '$ano-$mes-$dia';
   }
 
   @override
   void dispose() {
     nomeCompController.dispose();
+    usernameController.dispose();
     dataNascController.dispose();
     emailController.dispose();
     senhaController.dispose();
@@ -79,7 +145,6 @@ class _CadastroScreenState extends State<CadastroScreen> {
                       ),
                     ),
                     const SizedBox(height: 60),
-
                     TextField(
                       controller: nomeCompController,
                       style: const TextStyle(color: Colors.white),
@@ -88,21 +153,27 @@ class _CadastroScreenState extends State<CadastroScreen> {
                         border: OutlineInputBorder(),
                       ),
                     ),
-
                     const SizedBox(height: 16),
-
+                    TextField(
+                      controller: usernameController,
+                      style: const TextStyle(color: Colors.white),
+                      decoration: const InputDecoration(
+                        labelText: 'Username',
+                        border: OutlineInputBorder(),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
                     TextField(
                       controller: dataNascController,
-                      keyboardType: TextInputType.datetime,
+                      readOnly: true,
                       style: const TextStyle(color: Colors.white),
                       decoration: const InputDecoration(
                         labelText: 'Data de nascimento',
                         border: OutlineInputBorder(),
                       ),
+                      onTap: selecionarDataNascimento,
                     ),
-
                     const SizedBox(height: 16),
-
                     TextField(
                       controller: emailController,
                       keyboardType: TextInputType.emailAddress,
@@ -112,9 +183,7 @@ class _CadastroScreenState extends State<CadastroScreen> {
                         border: OutlineInputBorder(),
                       ),
                     ),
-
                     const SizedBox(height: 16),
-
                     TextField(
                       controller: senhaController,
                       obscureText: true,
@@ -124,9 +193,7 @@ class _CadastroScreenState extends State<CadastroScreen> {
                         border: OutlineInputBorder(),
                       ),
                     ),
-
                     const SizedBox(height: 16),
-
                     TextField(
                       controller: confirmarSenhaController,
                       obscureText: true,
@@ -136,22 +203,16 @@ class _CadastroScreenState extends State<CadastroScreen> {
                         border: OutlineInputBorder(),
                       ),
                     ),
-
                     const SizedBox(height: 24),
-
                     ElevatedButton(
                       onPressed: carregando ? null : fazerCadastro,
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color.fromARGB(255, 72, 0, 255),
                         foregroundColor: Colors.white,
                       ),
-                      child: Text(
-                        carregando ? 'Cadastrando...' : 'Cadastrar',
-                      ),
+                      child: Text(carregando ? 'Cadastrando...' : 'Cadastrar'),
                     ),
-
                     const SizedBox(height: 12),
-
                     TextButton(
                       onPressed: () {
                         Navigator.pop(context);

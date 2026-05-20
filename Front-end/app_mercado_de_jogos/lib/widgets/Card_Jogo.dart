@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class CardJogo extends StatelessWidget {
@@ -5,6 +7,9 @@ class CardJogo extends StatelessWidget {
   final double preco;
   final String urlCapa;
   final String categoria;
+  final VoidCallback? onAdicionar;
+  final String textoBotao;
+  final Color corBotao;
 
   const CardJogo({
     super.key,
@@ -12,6 +17,9 @@ class CardJogo extends StatelessWidget {
     required this.preco,
     required this.urlCapa,
     required this.categoria,
+    this.onAdicionar,
+    this.textoBotao = 'Adicionar',
+    this.corBotao = Colors.deepPurple,
   });
 
   @override
@@ -58,6 +66,20 @@ class CardJogo extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
+                if (onAdicionar != null) ...[
+                  const SizedBox(height: 8),
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: onAdicionar,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: corBotao,
+                        foregroundColor: Colors.white,
+                      ),
+                      child: Text(textoBotao),
+                    ),
+                  ),
+                ],
               ],
             ),
           ),

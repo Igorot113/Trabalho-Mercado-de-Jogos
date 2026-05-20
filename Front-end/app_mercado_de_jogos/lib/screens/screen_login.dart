@@ -1,6 +1,6 @@
-import 'dart:convert';
 import 'package:app_mercado_de_jogos/screens/screen_carrossel.dart';
-import 'screen_cadastro.dart';
+import 'package:app_mercado_de_jogos/screens/screen_cadastro.dart';
+import 'package:app_mercado_de_jogos/services/api_service.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -13,15 +13,45 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final loginController = TextEditingController();
   final senhaController = TextEditingController();
+  final apiService = ApiService();
 
   bool carregando = false;
 
-  void fazerLogin() {
-    // Precisamos fazer a validação do login com o back.
-    Navigator.push(
+  Future<void> fazerLogin() async {
+    if (loginController.text.trim().isEmpty ||
+        senhaController.text.trim().isEmpty) {
+      mostrarMensagem('Preencha login e senha.');
+      return;
+    }
+
+    setState(() => carregando = true);
+
+    try {
+      final usuario = await apiService.login(
+        login: loginController.text.trim(),
+        password: senhaController.text.trim(),
+      );
+
+      if (!mounted) return;
+
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) =>
+              ScreenCarrossel(usuarioId: usuario['id'] as int),
+        ),
+      );
+    } catch (e) {
+      mostrarMensagem(e.toString().replaceFirst('Exception: ', ''));
+    } finally {
+      if (mounted) setState(() => carregando = false);
+    }
+  }
+
+  void mostrarMensagem(String mensagem) {
+    ScaffoldMessenger.of(
       context,
-      MaterialPageRoute(builder: (context) => const ScreenCarrossel()),
-    );
+    ).showSnackBar(SnackBar(content: Text(mensagem)));
   }
 
   @override
@@ -79,7 +109,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   const SizedBox(height: 60),
-
                   TextField(
                     controller: loginController,
                     style: const TextStyle(color: Colors.white),
@@ -89,7 +118,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   const SizedBox(height: 16),
-
                   TextField(
                     controller: senhaController,
                     obscureText: true,
@@ -100,7 +128,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   const SizedBox(height: 24),
-
                   ElevatedButton(
                     onPressed: carregando ? null : fazerLogin,
                     style: ElevatedButton.styleFrom(
@@ -110,7 +137,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Text(carregando ? 'Entrando...' : 'Entrar'),
                   ),
                   const SizedBox(height: 12),
-
                   TextButton(
                     onPressed: () {
                       Navigator.push(

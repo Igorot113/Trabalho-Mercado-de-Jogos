@@ -40,5 +40,19 @@ namespace ArcadeFlow.Controllers
 
             return Ok(meusJogos);
         }
+
+        [HttpDelete("remover")]
+        public async Task<IActionResult> RemoverDaBiblioteca(int usuarioId, int jogoId)
+        {
+            var item = await _context.Bibliotecas
+                .FirstOrDefaultAsync(b => b.UsuarioId == usuarioId && b.JogoId == jogoId);
+
+            if (item == null) return NotFound(new { message = "Jogo não encontrado na sua biblioteca." });
+
+            _context.Bibliotecas.Remove(item);
+            await _context.SaveChangesAsync();
+
+            return Ok(new { message = "Jogo removido da sua biblioteca!" });
+        }
     }
 }

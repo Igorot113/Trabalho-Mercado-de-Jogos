@@ -1,0 +1,171 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Gabriel Pedroso\\Desktop\\Trabalho-Mercado-de-Jogos\\Back-end\\ArcadeFlow\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B3E55F-ED7F-4B8D-980A-B28B3D320987}|ArcadeFlow\\ArcadeFlow.csproj|c:\\users\\gabriel pedroso\\desktop\\trabalho-mercado-de-jogos\\back-end\\arcadeflow\\arcadeflow\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9B3E55F-ED7F-4B8D-980A-B28B3D320987}|ArcadeFlow\\ArcadeFlow.csproj|solutionrelative:arcadeflow\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B3E55F-ED7F-4B8D-980A-B28B3D320987}|ArcadeFlow\\ArcadeFlow.csproj|c:\\users\\gabriel pedroso\\desktop\\trabalho-mercado-de-jogos\\back-end\\arcadeflow\\arcadeflow\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9B3E55F-ED7F-4B8D-980A-B28B3D320987}|ArcadeFlow\\ArcadeFlow.csproj|solutionrelative:arcadeflow\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B3E55F-ED7F-4B8D-980A-B28B3D320987}|ArcadeFlow\\ArcadeFlow.csproj|c:\\users\\gabriel pedroso\\desktop\\trabalho-mercado-de-jogos\\back-end\\arcadeflow\\arcadeflow\\arcadeflow.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{F9B3E55F-ED7F-4B8D-980A-B28B3D320987}|ArcadeFlow\\ArcadeFlow.csproj|solutionrelative:arcadeflow\\arcadeflow.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B3E55F-ED7F-4B8D-980A-B28B3D320987}|ArcadeFlow\\ArcadeFlow.csproj|c:\\users\\gabriel pedroso\\desktop\\trabalho-mercado-de-jogos\\back-end\\arcadeflow\\arcadeflow\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9B3E55F-ED7F-4B8D-980A-B28B3D320987}|ArcadeFlow\\ArcadeFlow.csproj|solutionrelative:arcadeflow\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B3E55F-ED7F-4B8D-980A-B28B3D320987}|ArcadeFlow\\ArcadeFlow.csproj|c:\\users\\gabriel pedroso\\desktop\\trabalho-mercado-de-jogos\\back-end\\arcadeflow\\arcadeflow\\models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9B3E55F-ED7F-4B8D-980A-B28B3D320987}|ArcadeFlow\\ArcadeFlow.csproj|solutionrelative:arcadeflow\\models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B3E55F-ED7F-4B8D-980A-B28B3D320987}|ArcadeFlow\\ArcadeFlow.csproj|c:\\users\\gabriel pedroso\\desktop\\trabalho-mercado-de-jogos\\back-end\\arcadeflow\\arcadeflow\\models\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9B3E55F-ED7F-4B8D-980A-B28B3D320987}|ArcadeFlow\\ArcadeFlow.csproj|solutionrelative:arcadeflow\\models\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B3E55F-ED7F-4B8D-980A-B28B3D320987}|ArcadeFlow\\ArcadeFlow.csproj|c:\\users\\gabriel pedroso\\desktop\\trabalho-mercado-de-jogos\\back-end\\arcadeflow\\arcadeflow\\models\\biblioteca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9B3E55F-ED7F-4B8D-980A-B28B3D320987}|ArcadeFlow\\ArcadeFlow.csproj|solutionrelative:arcadeflow\\models\\biblioteca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B3E55F-ED7F-4B8D-980A-B28B3D320987}|ArcadeFlow\\ArcadeFlow.csproj|c:\\users\\gabriel pedroso\\desktop\\trabalho-mercado-de-jogos\\back-end\\arcadeflow\\arcadeflow\\data\\csvseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9B3E55F-ED7F-4B8D-980A-B28B3D320987}|ArcadeFlow\\ArcadeFlow.csproj|solutionrelative:arcadeflow\\data\\csvseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9B3E55F-ED7F-4B8D-980A-B28B3D320987}|ArcadeFlow\\ArcadeFlow.csproj|c:\\users\\gabriel pedroso\\desktop\\trabalho-mercado-de-jogos\\back-end\\arcadeflow\\arcadeflow\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9B3E55F-ED7F-4B8D-980A-B28B3D320987}|ArcadeFlow\\ArcadeFlow.csproj|solutionrelative:arcadeflow\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ArcadeFlow.http",
+              "DocumentMoniker": "C:\\Users\\Gabriel Pedroso\\Desktop\\Trabalho-Mercado-de-Jogos\\Back-end\\ArcadeFlow\\ArcadeFlow\\ArcadeFlow.http",
+              "RelativeDocumentMoniker": "ArcadeFlow\\ArcadeFlow.http",
+              "ToolTip": "C:\\Users\\Gabriel Pedroso\\Desktop\\Trabalho-Mercado-de-Jogos\\Back-end\\ArcadeFlow\\ArcadeFlow\\ArcadeFlow.http*",
+              "RelativeToolTip": "ArcadeFlow\\ArcadeFlow.http*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-05-19T18:49:48.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel Pedroso\\Desktop\\Trabalho-Mercado-de-Jogos\\Back-end\\ArcadeFlow\\ArcadeFlow\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "ArcadeFlow\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Gabriel Pedroso\\Desktop\\Trabalho-Mercado-de-Jogos\\Back-end\\ArcadeFlow\\ArcadeFlow\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "ArcadeFlow\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T18:49:32.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel Pedroso\\Desktop\\Trabalho-Mercado-de-Jogos\\Back-end\\ArcadeFlow\\ArcadeFlow\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "ArcadeFlow\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Gabriel Pedroso\\Desktop\\Trabalho-Mercado-de-Jogos\\Back-end\\ArcadeFlow\\ArcadeFlow\\Models\\Usuario.cs",
+              "RelativeToolTip": "ArcadeFlow\\Models\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T18:48:36.77Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel Pedroso\\Desktop\\Trabalho-Mercado-de-Jogos\\Back-end\\ArcadeFlow\\ArcadeFlow\\Models\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "ArcadeFlow\\Models\\LoginRequest.cs",
+              "ToolTip": "C:\\Users\\Gabriel Pedroso\\Desktop\\Trabalho-Mercado-de-Jogos\\Back-end\\ArcadeFlow\\ArcadeFlow\\Models\\LoginRequest.cs",
+              "RelativeToolTip": "ArcadeFlow\\Models\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T18:48:35.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Game.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel Pedroso\\Desktop\\Trabalho-Mercado-de-Jogos\\Back-end\\ArcadeFlow\\ArcadeFlow\\Models\\Game.cs",
+              "RelativeDocumentMoniker": "ArcadeFlow\\Models\\Game.cs",
+              "ToolTip": "C:\\Users\\Gabriel Pedroso\\Desktop\\Trabalho-Mercado-de-Jogos\\Back-end\\ArcadeFlow\\ArcadeFlow\\Models\\Game.cs",
+              "RelativeToolTip": "ArcadeFlow\\Models\\Game.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T18:48:33.503Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Biblioteca.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel Pedroso\\Desktop\\Trabalho-Mercado-de-Jogos\\Back-end\\ArcadeFlow\\ArcadeFlow\\Models\\Biblioteca.cs",
+              "RelativeDocumentMoniker": "ArcadeFlow\\Models\\Biblioteca.cs",
+              "ToolTip": "C:\\Users\\Gabriel Pedroso\\Desktop\\Trabalho-Mercado-de-Jogos\\Back-end\\ArcadeFlow\\ArcadeFlow\\Models\\Biblioteca.cs",
+              "RelativeToolTip": "ArcadeFlow\\Models\\Biblioteca.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T18:48:30.548Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CsvSeeder.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel Pedroso\\Desktop\\Trabalho-Mercado-de-Jogos\\Back-end\\ArcadeFlow\\ArcadeFlow\\Data\\CsvSeeder.cs",
+              "RelativeDocumentMoniker": "ArcadeFlow\\Data\\CsvSeeder.cs",
+              "ToolTip": "C:\\Users\\Gabriel Pedroso\\Desktop\\Trabalho-Mercado-de-Jogos\\Back-end\\ArcadeFlow\\ArcadeFlow\\Data\\CsvSeeder.cs",
+              "RelativeToolTip": "ArcadeFlow\\Data\\CsvSeeder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T18:48:20.658Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel Pedroso\\Desktop\\Trabalho-Mercado-de-Jogos\\Back-end\\ArcadeFlow\\ArcadeFlow\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "ArcadeFlow\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Gabriel Pedroso\\Desktop\\Trabalho-Mercado-de-Jogos\\Back-end\\ArcadeFlow\\ArcadeFlow\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "ArcadeFlow\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T18:48:12.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Gabriel Pedroso\\Desktop\\Trabalho-Mercado-de-Jogos\\Back-end\\ArcadeFlow\\ArcadeFlow\\Program.cs",
+              "RelativeDocumentMoniker": "ArcadeFlow\\Program.cs",
+              "ToolTip": "C:\\Users\\Gabriel Pedroso\\Desktop\\Trabalho-Mercado-de-Jogos\\Back-end\\ArcadeFlow\\ArcadeFlow\\Program.cs",
+              "RelativeToolTip": "ArcadeFlow\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T18:47:56.652Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

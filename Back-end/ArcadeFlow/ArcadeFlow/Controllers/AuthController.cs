@@ -30,6 +30,7 @@ namespace ArcadeFlow.Controllers
                 Nome = request.Nome,
                 Email = request.Email,
                 Username = request.Username,
+                DataNascimento = request.DataNascimento,
                 SenhaHash = BCrypt.Net.BCrypt.HashPassword(request.Password)
 
             };
@@ -57,9 +58,10 @@ namespace ArcadeFlow.Controllers
                 nome = usuario.Nome,
                 email = usuario.Email,
                 username = usuario.Username,
+                dataNascimento = usuario.DataNascimento,
             });
         }
     }
 
-    public record RegisterRequest(string Nome, string Email, string Username, string Password);
+    public record RegisterRequest(string Nome, string Email, string Username, DateOnly DataNascimento, string Password);
 }

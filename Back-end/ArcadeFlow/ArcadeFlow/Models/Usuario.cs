@@ -20,6 +20,8 @@ namespace ArcadeFlow.Models
         [Required]
         public string SenhaHash { get; set; } = string.Empty;
 
+        public DateOnly? DataNascimento { get; set; }
+
         public DateTime DataCriacao { get; set; } = DateTime.UtcNow;
 
     }
