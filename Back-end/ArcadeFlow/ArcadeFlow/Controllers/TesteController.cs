@@ -19,7 +19,7 @@ namespace ArcadeFlow.Controllers
         public async Task<IActionResult> Importar (int pagina)
         {
             // Coloque o caminho real do seu arquivo aqui
-            string caminho = @"C:\Users\Eduardo\Documents\Projetos\games.csv";
+            string caminho = "/home/igor/Área de trabalho/TESTAZAO"; // /home/igor/Área de trabalho/TESTAZAO
 
             var seeder = new CsvSeeder(_context);
             await seeder.ImportarJogosDoCsv(caminho);
