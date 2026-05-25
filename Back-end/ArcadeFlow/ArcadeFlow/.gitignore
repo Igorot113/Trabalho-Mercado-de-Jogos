@@ -1,5 +1,5 @@
 ## [ Visual Studio ]
-# Arquivos de build e pastas de saída
+# Arquivos de build e pastas de saï¿½da
 bin/
 obj/
 [Dd]ebug/
@@ -10,7 +10,7 @@ bld/
 [Log]s/
 [Tt]est[Rr]esults/
 
-# Arquivos de solução e cache do VS
+# Arquivos de soluï¿½ï¿½o e cache do VS
 .vs/
 *.user
 *.userosscache
@@ -18,15 +18,15 @@ bld/
 *.suo
 
 ## [ .NET Core ]
-# Arquivos de configuração de ambiente (Contém suas strings de conexão com o banco)
+# Arquivos de configuraï¿½ï¿½o de ambiente (Contï¿½m suas strings de conexï¿½o com o banco)
 appsettings.Development.json
 appsettings.Local.json
 
-# Segredos do usuário (User Secrets)
+# Segredos do usuï¿½rio (User Secrets)
 secrets.json
 
 ## [ Entity Framework ]
-# Logs e arquivos temporários de migração se houver
+# Logs e arquivos temporï¿½rios de migraï¿½ï¿½o se houver
 *.db
 *.db-shm
 *.db-wal
@@ -44,11 +44,14 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 
-# Arquivo CSV de dados (Como você está usando para seed, 
-# se ele for muito grande, é bom ignorar)
+# Arquivo CSV de dados (Como vocï¿½ estï¿½ usando para seed, 
+# se ele for muito grande, ï¿½ bom ignorar)
 ../ArcadeFlow/games.csv 
 
 ## [ Packages ]
 *.nupkg
 # NuGet packages directory
 packages/
+
+## Arquivo de configuracao do banco
+appsettings.json

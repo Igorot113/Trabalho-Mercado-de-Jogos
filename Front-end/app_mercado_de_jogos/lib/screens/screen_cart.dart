@@ -97,10 +97,10 @@ class _ScreenCartState extends State<ScreenCart> {
             }
 
             return GridView.builder(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(5.0),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                childAspectRatio: 0.82,
+                childAspectRatio: 1.8,
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 10,
               ),
