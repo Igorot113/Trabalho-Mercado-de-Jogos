@@ -52,6 +52,3 @@ Desktop.ini
 *.nupkg
 # NuGet packages directory
 packages/
-
-## Arquivo de configuracao do banco
-appsettings.json
