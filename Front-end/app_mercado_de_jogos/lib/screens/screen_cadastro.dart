@@ -98,6 +98,9 @@ class _CadastroScreenState extends State<CadastroScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // Obtém o tamanho da tela para ajustes dinâmicos, se necessário
+    final size = MediaQuery.of(context).size;
+
     return Scaffold(
       body: Container(
         width: double.infinity,
@@ -106,16 +109,19 @@ class _CadastroScreenState extends State<CadastroScreen> {
           color: Color(0xFF0D47A1),
           image: DecorationImage(
             image: AssetImage('assents/fundo.png'),
-            fit: BoxFit.fitWidth,
+            fit: BoxFit.cover, // Alterado de fitWidth para cover para melhor adaptação de fundo
           ),
         ),
-        child: Padding(
-          padding: const EdgeInsets.all(24),
+        // SafeArea adicionado para proteger contra notches e bordas do sistema
+        child: SafeArea(
           child: Center(
             child: SingleChildScrollView(
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
               child: Container(
-                width: 350,
-                padding: const EdgeInsets.all(24),
+                // Substituindo a largura fixa de 350 por BoxConstraints
+                constraints: const BoxConstraints(maxWidth: 400),
+                width: double.infinity,
+                padding: EdgeInsets.all(size.width > 350 ? 24 : 16), // Padding responsivo
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(139, 0, 0, 0),
                   border: Border.all(
@@ -144,7 +150,7 @@ class _CadastroScreenState extends State<CadastroScreen> {
                         color: Color.fromARGB(255, 89, 0, 255),
                       ),
                     ),
-                    const SizedBox(height: 60),
+                    const SizedBox(height: 40), // Reduzido ligeiramente para caber melhor em telas pequenas
                     TextField(
                       controller: nomeCompController,
                       style: const TextStyle(color: Colors.white),
@@ -204,20 +210,27 @@ class _CadastroScreenState extends State<CadastroScreen> {
                       ),
                     ),
                     const SizedBox(height: 24),
-                    ElevatedButton(
-                      onPressed: carregando ? null : fazerCadastro,
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color.fromARGB(255, 72, 0, 255),
-                        foregroundColor: Colors.white,
+                    SizedBox(
+                      width: double.infinity, // Faz o botão ocupar toda a largura disponível do contêiner
+                      height: 50, // Altura confortável para o toque (Touch Target)
+                      child: ElevatedButton(
+                        onPressed: carregando ? null : fazerCadastro,
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color.fromARGB(255, 72, 0, 255),
+                          foregroundColor: Colors.white,
+                        ),
+                        child: Text(
+                          carregando ? 'Cadastrando...' : 'Cadastrar',
+                          style: const TextStyle(fontSize: 16),
+                        ),
                       ),
-                      child: Text(carregando ? 'Cadastrando...' : 'Cadastrar'),
                     ),
                     const SizedBox(height: 12),
                     TextButton(
                       onPressed: () {
                         Navigator.pop(context);
                       },
-                      child: const Text('Ja tenho uma conta'),
+                      child: const Text('Já tenho uma conta'),
                     ),
                   ],
                 ),
